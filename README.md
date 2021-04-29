@@ -42,14 +42,10 @@ uses [backtracking](https://www.geeksforgeeks.org/sudoku-backtracking-7/) to sol
 
 ## role of nodejs
 
-1. the user can only view the simulation of the algorithm if authenticated using oauth. oauth is achieved using [passportjs](http://www.passportjs.org/packages/passport-google-oauth2/). the flow of oauth in the application is described in the next few steps.
-2. user enters the website, and on clicking the signin button, the user is directed to the consent screen
-3. since passport has all the admin's api key
-4. when the user grants permission, the google api redirects to the "redirect uri" with a code.
-5. after this, passport middleware intervenes. this middleware can use the code of the previous step, send it to google, in a reply to which google sends the user details like email, name, profile phot, etc.
-6. now after getting access to the user details, it is saved to mongodb, after which the user is redirected to the homepage of the website.
-7. once successfully logged in, the user can view all simulations and also send feedback about the website.
-8. the feedback is directly sent over to the admin, and an acknowledgement is delivered to the user, with the help of [nodemailer](https://nodemailer.com/about/).
+1. the user can only view the simulation of the algorithm if authenticated. oauth is achieved using [passportjs](http://www.passportjs.org/packages/passport-google-oauth2/).
+2. after google "validates" the user, their details (email id) are saved to the database ([mongodb atlas](https://www.mongodb.com/cloud/atlas))
+3. once successfully logged in, the user can view all simulations and also send feedback about the website.
+4. the feedback is directly sent over to the admin, and an acknowledgement is delivered to the user, with the help of [nodemailer](https://nodemailer.com/about/).
 
 <br />
 
