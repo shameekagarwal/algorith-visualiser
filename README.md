@@ -56,7 +56,6 @@ uses [backtracking](https://www.geeksforgeeks.org/sudoku-backtracking-7/) to sol
 3. mongodb
 4. javascript
 5. bootstrap
-6. nodemailer
 
 </b>
 
