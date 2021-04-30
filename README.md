@@ -18,7 +18,7 @@ the algorithms it simulates are -
    3. [heap sort](demo-images/Heapsort.png)
 2. graph
    1. [kruskal](demo-images/Kruskal.png)
-   2. [dijikstra](demo-images/Dijkstra.png)
+   2. [dijkstra](demo-images/Dijkstra.png)
 3. [convex hull](demo-images/ConvexHull.png)
 4. [sudoku](demo-images/Sudoku.png)
 
@@ -26,7 +26,7 @@ the algorithms it simulates are -
 
 ## sorting
 
-user can enter / generate a random array of elements. vanilla js simulates the sorting algorithmon on html canvas. the speed of the simulation is fast for array lengths > 100. the bars too are responsive i.e. scale according to viewport size. all three algortihms have complexity `O(N*log(N)`.
+user can enter / generate a random array of elements. vanilla js simulates the sorting algorithm on html canvas. the speed of the simulation is fast for array lengths > 100. the bars too are responsive i.e. scale according to viewport size. all three algorithms [merge sort](https://www.geeksforgeeks.org/merge-sort/), [quick sort](https://www.geeksforgeeks.org/quick-sort/), [heap sort](https://www.geeksforgeeks.org/heap-sort/) have complexity `O(Nlog(N)`.
 
 ## graph
 
@@ -34,18 +34,21 @@ graph algorithms are simulated using [visjs](https://github.com/visjs/vis-networ
 
 ## convex hull
 
-it uses [p5js](https://p5js.org/) to draw the convex hull incrementally based on the markers placed by the user. it uses [jarvis algortihm](https://www.geeksforgeeks.org/convex-hull-set-1-jarviss-algorithm-or-wrapping/), leading to a complexity of `O(n^2)`.
+it uses [p5js](https://p5js.org/) to draw the convex hull incrementally based on the markers placed by the user. it uses [jarvis algorithm](https://www.geeksforgeeks.org/convex-hull-set-1-jarviss-algorithm-or-wrapping/), leading to a complexity of `O(n^2)`.
 
 ## sudoku
 
-uses [backtracking](https://www.geeksforgeeks.org/sudoku-backtracking-7/) to solve the sudoku, in `O(9^(n*n))` complexity. with each decision that is taken by the algortihm, a delay is associated which helps in visualising the algorithm.
+uses [backtracking](https://www.geeksforgeeks.org/sudoku-backtracking-7/) to solve the sudoku, in `O(9^(n^2))` complexity. with each decision that is taken by the algorithm, a delay is associated which helps in visualising the algorithm.
 
 ## role of nodejs
 
-1. the user can only view the simulation of the algorithm if authenticated. oauth is achieved using [passportjs](http://www.passportjs.org/packages/passport-google-oauth2/).
-2. after google "validates" the user, their details (email id) are saved to the database ([mongodb atlas](https://www.mongodb.com/cloud/atlas))
-3. once successfully logged in, the user can view all simulations and also send feedback about the website.
-4. the feedback is directly sent over to the admin, and an acknowledgement is delivered to the user, with the help of [nodemailer](https://nodemailer.com/about/).
+the user can only view the simulation of the algorithm if authenticated. oauth is achieved using [passportjs](http://www.passportjs.org/packages/passport-google-oauth2/).
+<br />
+after google "validates" the user, their details (email id) are saved to the database ([mongodb atlas](https://www.mongodb.com/cloud/atlas))
+<br />
+once successfully logged in, the user can view all simulations and also send feedback about the website.
+<br />
+the feedback is directly sent over to the admin, and an acknowledgement is delivered to the user, with the help of [nodemailer](https://nodemailer.com/about/).
 
 <br />
 
