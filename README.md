@@ -44,7 +44,7 @@ uses [backtracking](https://www.geeksforgeeks.org/sudoku-backtracking-7/) to sol
 
 the user can only view the simulation of the algorithm if authenticated. oauth is achieved using [passportjs](http://www.passportjs.org/packages/passport-google-oauth2/).
 <br />
-after google "validates" the user, their details (email id) are saved to the database ([mongodb atlas](https://www.mongodb.com/cloud/atlas))
+after google "validates" the user, their details (name and email id) are saved to the database ([mongodb atlas](https://www.mongodb.com/cloud/atlas))
 <br />
 once successfully logged in, the user can view all simulations and also send feedback about the website.
 <br />
